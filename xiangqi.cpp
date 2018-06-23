@@ -482,7 +482,7 @@ int Board::get_score(int color) {
 }
 
 void Board::render(void) {
-    char piece[8] = {'\0', 'G', 'A', 'E', 'H', 'C', 'c', 'S'};
+    char piece[8] = {'\0', 'G', 'A', 'E', 'H', 'R', 'C', 'S'};
     int board[10][9] = {};
 
     set<Piece*>::iterator iter;

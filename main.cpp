@@ -24,6 +24,7 @@ int main(void) {
         cout << "2. Show best move" << endl;
         cout << "> ";
         cin >> cmd;
+        getchar();
 
         switch (cmd) {
         case 1:
@@ -35,6 +36,7 @@ int main(void) {
             piece = board.get_piece_at(pos1);
             if (piece == nullptr) {
                 cout << "No piece at position" << endl;
+                getchar();
                 break;
             }
 
