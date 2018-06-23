@@ -1,5 +1,5 @@
-CC = g++ -std=c++14
-CFLAGS = -W -Wall
+CC = g++
+CFLAGS = -std=c++14 -W -Wall
 TARGET = xiangqi.exe
 
 $(TARGET) : xiangqi.o main.o
