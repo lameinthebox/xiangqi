@@ -49,6 +49,7 @@ bool in_castle(const Position&);
 class Piece {
 public:
     Piece(bool, Position, int, int);
+    virtual ~Piece(void);
 
     void print(void);
 
@@ -124,6 +125,7 @@ class Board {
 public:
     Board(void);
     Board(set<Piece*>*);
+    ~Board(void);
 
     int can_move(Piece*, Position);
     bool move(Piece*, Position);

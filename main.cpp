@@ -2,6 +2,7 @@
 
 
 int main(void) {
+    int cmd = 0;
     /*
     set<Piece*> pieces;
     pieces.insert(new Chariot(RED, {8,4}));
@@ -10,8 +11,7 @@ int main(void) {
     Board board = Board(&pieces);
     */
     Board board;
-    while (true) {
-        int cmd = 0;
+    while (cmd != 9) {
         int cnt = 0;
         vector<Position> next;
         Piece* piece = nullptr;
@@ -22,6 +22,7 @@ int main(void) {
         cout << endl;
         cout << "1. Select piece" << endl;
         cout << "2. Show best move" << endl;
+        cout << "9. exit" << endl;
         cout << "> ";
         cin >> cmd;
         getchar();

@@ -17,6 +17,8 @@ Piece::Piece(bool _color, Position _pos, int _type, int _point) {
     point = _point;
 }
 
+Piece::~Piece(void) {}
+
 bool Piece::operator<(const Piece& p) const {
     if (pos.row < p.pos.row) {
         return true;
@@ -419,6 +421,13 @@ Board::Board(void) {
 
 Board::Board(set<Piece*>* _pieces) {
     pieces = _pieces;
+}
+
+Board::~Board(void) {
+    set<Piece*>::iterator iter;
+    for (iter = pieces->begin(); iter != pieces->end(); ++iter) {
+        delete (*iter);
+    }
 }
 
 set<Piece*>* Board::get_pieces(void) {
